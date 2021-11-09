@@ -44,16 +44,9 @@ build {
   ]
   provisioner "shell" {
     environment_vars = [
-      "FOO=hello world",
+      "TF_VERSION=1.0.10",
     ]
-    inline = [
-      "sleep 30",
-      "curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee  /usr/share/keyrings/jenkins-keyring.asc > /dev/null",
-      "echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null",
-      "sudo apt-get update",
-      "sudo apt-get install -y openjdk-11-jdk",
-      "sudo apt-get install -y jenkins",
-    ]
+    scripts = ["./install.sh"]
   }
 }
 
