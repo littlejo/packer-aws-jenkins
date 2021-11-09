@@ -48,5 +48,6 @@ build {
     ]
     scripts = ["./install.sh"]
   }
+  post-processor "manifest" {}
 }
 
