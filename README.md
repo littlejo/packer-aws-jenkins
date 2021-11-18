@@ -1,3 +1,1 @@
 # packer-aws-jenkins
-
-test
