@@ -8,6 +8,7 @@ sudo apt-get update
 sudo apt-get install -y openjdk-11-jdk
 sudo apt-get install -y jenkins
 sudo apt-get install -y unzip
+sudo apt-get install -y docker.io
 sudo wget https://releases.hashicorp.com/terraform/$TF_VERSION/terraform_${TF_VERSION}_linux_amd64.zip -O /tmp/terraform.zip
 sudo unzip /tmp/terraform.zip
 sudo mv terraform /usr/local/bin
